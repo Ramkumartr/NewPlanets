@@ -28,10 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    //    func applicationDidEnterBackground(_ application: UIApplication) {
-    //        CoreDataStorage.shared.saveContext()
-    //    }
-    
     class func sharedInstance() -> AppDelegate {
         UIApplication.shared.delegate as! AppDelegate
     }

@@ -34,12 +34,8 @@ final class PlanetsFlowCoordinator {
         planetsViewController = vc
     }
     
-    
     private func showPlanetDetails(planet: Planet) {
         
     }
     
-    //    private func backAction() {
-    //        router?.popModule()
-    //    }
 }
