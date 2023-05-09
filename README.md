@@ -2,7 +2,7 @@
 
 # Features
 
-- The app supports a minimum iOS version of 15.0.
+- The app supports a minimum iOS version of 13.0.
 
 - It loads data from the API: https://swapi.co/api/planets. Download the list of planets and display the list of planet names from the first page of planet data.
 
