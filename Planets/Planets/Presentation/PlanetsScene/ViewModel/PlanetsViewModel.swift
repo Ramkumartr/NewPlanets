@@ -25,9 +25,8 @@ protocol PlanetsViewModelOutput: ObservableObject {
     var planets: [PlanetItemModel] { get }
     var loading: PlanetsViewModelLoading? { get }
     var error: String? { get }
-    //   var isEmpty: Bool { get }
     var screenTitle: String { get }
-    //   var errorTitle: String { get }
+    var errorTitle: String { get }
 }
 
 protocol PlanetsViewModelInterface: PlanetsViewModelInput, PlanetsViewModelOutput {}
@@ -46,9 +45,8 @@ final class PlanetsViewModel: PlanetsViewModelInterface {
     @Published var planets: [PlanetItemModel] = [PlanetItemModel]()
     @Published var loading: PlanetsViewModelLoading?
     @Published var error: String? = nil
-    //  var isEmpty: Bool { return planets.value.isEmpty }
     @Published var screenTitle = NSLocalizedString("Planets", comment: "")
-    //  let errorTitle = NSLocalizedString("Error", comment: "")
+    let errorTitle = NSLocalizedString("Error", comment: "")
     
     // MARK: - Init
     

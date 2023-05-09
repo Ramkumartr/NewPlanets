@@ -15,7 +15,8 @@ final class PlanetsViewModelMock: PlanetsViewModelInterface {
     @Published var loading: PlanetsViewModelLoading?
     @Published var error: String?
     @Published var screenTitle = NSLocalizedString("Planets", comment: "")
-    
+    var errorTitle: String = ""
+
     // MARK: - Init
     
     init() {

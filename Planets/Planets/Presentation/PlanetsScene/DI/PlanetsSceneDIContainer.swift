@@ -43,7 +43,7 @@ final class PlanetsSceneDIContainer {
     
     func makePlanetsViewModel(actions: PlanetsViewModelActions) -> PlanetsViewModel {
         return PlanetsViewModel(fetchPlanetsUseCase: makeFetchPlanetsUseCase(),
-                                       actions: actions)
+                                actions: actions)
     }
     
     
