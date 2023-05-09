@@ -46,6 +46,12 @@
 		6894FEC22A0A4A0D00941CB7 /* PlanetsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894FEC12A0A4A0D00941CB7 /* PlanetsListView.swift */; };
 		6894FEC42A0AB29D00941CB7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894FEC32A0AB29D00941CB7 /* LoadingView.swift */; };
 		6894FEC72A0AB85500941CB7 /* PlanetsViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894FEC62A0AB85500941CB7 /* PlanetsViewModelMock.swift */; };
+		6894FED32A0AD01800941CB7 /* NetworkConfigurableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894FECA2A0AD01800941CB7 /* NetworkConfigurableMock.swift */; };
+		6894FED42A0AD01800941CB7 /* NetworkSessionManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894FECB2A0AD01800941CB7 /* NetworkSessionManagerMock.swift */; };
+		6894FED52A0AD01800941CB7 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894FECC2A0AD01800941CB7 /* NetworkServiceTests.swift */; };
+		6894FED62A0AD01800941CB7 /* DataTransferServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894FECD2A0AD01800941CB7 /* DataTransferServiceTests.swift */; };
+		6894FED72A0AD01800941CB7 /* PlanetsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894FED02A0AD01800941CB7 /* PlanetsViewModelTests.swift */; };
+		6894FED82A0AD01800941CB7 /* FetchPlanetsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6894FED22A0AD01800941CB7 /* FetchPlanetsUseCaseTests.swift */; };
 		68A9AD8629F173C700AE9182 /* PlanetsRequestDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9AD8529F173C700AE9182 /* PlanetsRequestDTO+Mapping.swift */; };
 		68A9AD8829F173E700AE9182 /* PlanetsResponseDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9AD8729F173E700AE9182 /* PlanetsResponseDTO+Mapping.swift */; };
 		68A9AD8B29F1A6FF00AE9182 /* RepositoryTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A9AD8A29F1A6FF00AE9182 /* RepositoryTask.swift */; };
@@ -111,6 +117,12 @@
 		6894FEC12A0A4A0D00941CB7 /* PlanetsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsListView.swift; sourceTree = "<group>"; };
 		6894FEC32A0AB29D00941CB7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		6894FEC62A0AB85500941CB7 /* PlanetsViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsViewModelMock.swift; sourceTree = "<group>"; };
+		6894FECA2A0AD01800941CB7 /* NetworkConfigurableMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfigurableMock.swift; sourceTree = "<group>"; };
+		6894FECB2A0AD01800941CB7 /* NetworkSessionManagerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkSessionManagerMock.swift; sourceTree = "<group>"; };
+		6894FECC2A0AD01800941CB7 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		6894FECD2A0AD01800941CB7 /* DataTransferServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTransferServiceTests.swift; sourceTree = "<group>"; };
+		6894FED02A0AD01800941CB7 /* PlanetsViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlanetsViewModelTests.swift; sourceTree = "<group>"; };
+		6894FED22A0AD01800941CB7 /* FetchPlanetsUseCaseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchPlanetsUseCaseTests.swift; sourceTree = "<group>"; };
 		68A9AD8529F173C700AE9182 /* PlanetsRequestDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlanetsRequestDTO+Mapping.swift"; sourceTree = "<group>"; };
 		68A9AD8729F173E700AE9182 /* PlanetsResponseDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlanetsResponseDTO+Mapping.swift"; sourceTree = "<group>"; };
 		68A9AD8A29F1A6FF00AE9182 /* RepositoryTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTask.swift; sourceTree = "<group>"; };
@@ -188,6 +200,9 @@
 		6821CBBF29EF0FB2003622FF /* PlanetsTests */ = {
 			isa = PBXGroup;
 			children = (
+				6894FED12A0AD01800941CB7 /* Domain */,
+				6894FEC82A0AD01800941CB7 /* Infrastructure */,
+				6894FECE2A0AD01800941CB7 /* Presentation */,
 				6821CBC029EF0FB2003622FF /* PlanetsTests.swift */,
 			);
 			path = PlanetsTests;
@@ -412,6 +427,49 @@
 				6894FEC62A0AB85500941CB7 /* PlanetsViewModelMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		6894FEC82A0AD01800941CB7 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				6894FEC92A0AD01800941CB7 /* Mocks */,
+				6894FECC2A0AD01800941CB7 /* NetworkServiceTests.swift */,
+				6894FECD2A0AD01800941CB7 /* DataTransferServiceTests.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		6894FEC92A0AD01800941CB7 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				6894FECA2A0AD01800941CB7 /* NetworkConfigurableMock.swift */,
+				6894FECB2A0AD01800941CB7 /* NetworkSessionManagerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		6894FECE2A0AD01800941CB7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6894FECF2A0AD01800941CB7 /* PlanetScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6894FECF2A0AD01800941CB7 /* PlanetScene */ = {
+			isa = PBXGroup;
+			children = (
+				6894FED02A0AD01800941CB7 /* PlanetsViewModelTests.swift */,
+			);
+			path = PlanetScene;
+			sourceTree = "<group>";
+		};
+		6894FED12A0AD01800941CB7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				6894FED22A0AD01800941CB7 /* FetchPlanetsUseCaseTests.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		68A9AD8429F1739000AE9182 /* DataMapping */ = {
@@ -649,16 +707,22 @@
 			files = (
 				688E66902A016CC10067B6C5 /* Cancellable.swift in Sources */,
 				688E66832A0127B50067B6C5 /* DataTransferService.swift in Sources */,
+				6894FED82A0AD01800941CB7 /* FetchPlanetsUseCaseTests.swift in Sources */,
 				688E66852A0127CB0067B6C5 /* Endpoint.swift in Sources */,
 				688E668D2A0162BC0067B6C5 /* PlanetModel.swift in Sources */,
 				6839E18F2A0276DD008E73A3 /* PlanetItemModel.swift in Sources */,
 				6821CBC129EF0FB2003622FF /* PlanetsTests.swift in Sources */,
 				688E668E2A016A920067B6C5 /* PlanetsRepository.swift in Sources */,
+				6894FED42A0AD01800941CB7 /* NetworkSessionManagerMock.swift in Sources */,
+				6894FED32A0AD01800941CB7 /* NetworkConfigurableMock.swift in Sources */,
 				688E66842A0127C10067B6C5 /* NetworkService.swift in Sources */,
+				6894FED52A0AD01800941CB7 /* NetworkServiceTests.swift in Sources */,
 				688E668F2A016CA00067B6C5 /* PlanetsQueryModel.swift in Sources */,
+				6894FED62A0AD01800941CB7 /* DataTransferServiceTests.swift in Sources */,
 				688E66912A01823C0067B6C5 /* FetchPlanetsUseCase.swift in Sources */,
 				688E66862A0128060067B6C5 /* NetworkConfig.swift in Sources */,
 				6839E18D2A027347008E73A3 /* PlanetsViewModel.swift in Sources */,
+				6894FED72A0AD01800941CB7 /* PlanetsViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
