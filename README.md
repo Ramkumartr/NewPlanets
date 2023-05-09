@@ -14,7 +14,7 @@
 
 - Unit testing has been added.
 
-- only used the standard Apple iOS frameworks.
+- Only used the standard Apple iOS frameworks.
 
 
 
@@ -47,4 +47,9 @@
 5. Unit Tesing
 
 - Unit testing should be added for the data part, especially for persistent storage. 
+
+6. Localization
+
+- Localization support needs to be added.
+
 
